@@ -1,0 +1,6 @@
+<searchengine>
+   <id>5min</id>
+   <displayname>5min</displayname>
+   <url>http://api.5min.com/search/%s/videos.xml</url>
+   <sort>11</sort>
+</searchengine>

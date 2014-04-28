@@ -1,0 +1,46 @@
+[DEFAULT]
+name: Android Devices
+executable: ffmpeg
+extension: mp4
+bitrate: 300000
+parameters: -i {input} -y -acodec aac -ab 160k -s {ssize} -vcodec libx264 -preset slow -profile:v baseline -level 30 -maxrate 10000000 -bufsize 10000000 -f mp4 -threads 0 {output}
+mediatype: video
+
+[G2]
+ssize: 800x480
+
+[Nexus One]
+ssize: 800x400
+
+[Dream / G1]
+ssize: 480x320
+
+[Magic / myTouch]
+ssize: 480x320
+
+[Droid]
+ssize: 854x480
+
+[Eris / Desire]
+ssize: 480x320
+
+[Hero]
+ssize: 480x320
+
+[Cliq / DEXT]
+ssize: 480x320
+
+[Behold II]
+ssize: 480x320
+
+[Galaxy Tab]
+ssize: 1024x800
+
+[Epic]
+ssize: 800x480
+
+[Xoom]
+ssize: 1280x800
+
+[Sensation / EVO 3D]
+ssize: 960x540

@@ -1,0 +1,59 @@
+[DEFAULT]
+name: Other Devices and Formats
+
+[Playstation Portable (PSP)]
+executable: ffmpeg
+extension: mp4
+bitrate: 600000
+parameters: -i {input} -s 320x240 -b 512000 -ar 24000 -ab 64000 -f psp -r 29.97 {output}
+mediatype: video
+
+[Kindle Fire]
+extension: mp4
+executable: ffmpeg
+extension: mp4
+bitrate: 700000
+parameters: -i {input} -acodec aac -ab 96k -vcodec libx264 -preset slow -f mp4 -crf 22 {output}
+mediatype: video
+ssize: 1024x600
+
+[WebM (VP8)]
+only_on: osx
+executable: ffmpeg
+extension: webm
+bitrate: 1200000
+parameters: -i {input} -f webm -vcodec libvpx -acodec libvorbis -ab 160000 -sameq {output}
+mediatype: video
+
+[MP4]
+extension: mp4
+executable: ffmpeg
+extension: mp4
+bitrate: 700000
+parameters: -i {input} -acodec aac -ab 96k -vcodec libx264 -preset slow -f mp4 -crf 22 {output}
+mediatype: video
+
+[MP3]
+executable: ffmpeg
+extension: mp3
+# below is a guess!
+bitrate: 160000
+parameters: -i {input} -f mp3 -y {output}
+mediatype: audio
+
+[Ogg Theora]
+executable: ffmpeg
+extension: ogv
+# below is a guess!
+bitrate: 1200000
+parameters: -i {input} -f ogg -vcodec libtheora -acodec libvorbis -aq 60 {output}
+mediatype: video
+
+[Ogg Vorbis]
+executable: ffmpeg
+extension: ogg
+# below is a guess!
+audiorate: 300000
+parameters: -i {input} -f ogg -vn -acodec libvorbis -aq 60 {output}
+mediatype: audio
+

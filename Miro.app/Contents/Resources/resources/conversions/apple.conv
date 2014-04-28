@@ -1,0 +1,28 @@
+[DEFAULT]
+name: Apple Devices
+executable: ffmpeg
+extension: mp4
+ssize: 480x320
+bitrate: 1200000
+parameters: -i {input} -acodec aac -ac 2 -strict experimental -ab 160k -s {ssize} -vcodec libx264 -preset slow -profile:v baseline -level 30 -maxrate 10000000 -bufsize 10000000 -b 1200k -f mp4 -threads 0 {output}
+mediatype: video
+
+[iPhone]
+
+[iPod Touch]
+
+[iPod Nano]
+
+[iPod Classic]
+
+[iPad / iPhone G4]
+ssize: 640x480
+
+[iPhone 4 / iPod Touch 4]
+ssize: 640x480
+
+[iPad]
+ssize: 1024x768
+
+[Apple Universal]
+ssize: 1280x720
